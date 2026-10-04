@@ -1,6 +1,10 @@
 from flask import Flask
 
+
+
 app = Flask(__name__)
+
+
 
 @app.route("/")
 
@@ -12,21 +16,31 @@ def home():
 
 <html lang="en">
 
+
+
 <head>
 
 <meta charset="UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+
+
 <title>For Varleen ✨</title>
 
+
+
 <style>
+
+
 
 /* =========================================================
 
    RESET
 
 ========================================================= */
+
+
 
 * {
 
@@ -38,11 +52,15 @@ def home():
 
 }
 
+
+
 html {
 
     scroll-behavior: smooth;
 
 }
+
+
 
 body {
 
@@ -56,11 +74,15 @@ body {
 
 }
 
+
+
 /* =========================================================
 
    BACKGROUND
 
 ========================================================= */
+
+
 
 body::before {
 
@@ -70,6 +92,8 @@ body::before {
 
     inset: 0;
 
+
+
     background:
 
         radial-gradient(circle at 20% 20%, rgba(142, 92, 255, .14), transparent 30%),
@@ -78,11 +102,15 @@ body::before {
 
         radial-gradient(circle at 50% 90%, rgba(71, 128, 255, .10), transparent 35%);
 
+
+
     pointer-events: none;
 
     z-index: -3;
 
 }
+
+
 
 .aurora {
 
@@ -100,9 +128,13 @@ body::before {
 
     background: linear-gradient(135deg, #8b5cf6, #ec4899);
 
+
+
     top: -300px;
 
     left: -200px;
+
+
 
     animation: auroraMove 15s infinite alternate ease-in-out;
 
@@ -110,13 +142,19 @@ body::before {
 
 }
 
+
+
 @keyframes auroraMove {
+
+
 
     0% {
 
         transform: translate(0, 0) scale(1);
 
     }
+
+
 
     100% {
 
@@ -126,11 +164,15 @@ body::before {
 
 }
 
+
+
 /* =========================================================
 
    STARS
 
 ========================================================= */
+
+
 
 #stars {
 
@@ -143,6 +185,8 @@ body::before {
     z-index: -1;
 
 }
+
+
 
 .star {
 
@@ -160,7 +204,11 @@ body::before {
 
 }
 
+
+
 @keyframes twinkle {
+
+
 
     from {
 
@@ -169,6 +217,8 @@ body::before {
         transform: scale(.5);
 
     }
+
+
 
     to {
 
@@ -180,11 +230,15 @@ body::before {
 
 }
 
+
+
 /* =========================================================
 
    MOUSE GLOW
 
 ========================================================= */
+
+
 
 .cursor-glow {
 
@@ -196,6 +250,8 @@ body::before {
 
     border-radius: 50%;
 
+
+
     background: radial-gradient(
 
         circle,
@@ -206,6 +262,8 @@ body::before {
 
     );
 
+
+
     transform: translate(-50%, -50%);
 
     pointer-events: none;
@@ -214,11 +272,15 @@ body::before {
 
 }
 
+
+
 /* =========================================================
 
    INTRO
 
 ========================================================= */
+
+
 
 .intro {
 
@@ -228,6 +290,8 @@ body::before {
 
     background: #05050b;
 
+
+
     display: flex;
 
     justify-content: center;
@@ -236,11 +300,17 @@ body::before {
 
     text-align: center;
 
+
+
     z-index: 99999;
+
+
 
     transition: opacity 1.2s ease, visibility 1.2s ease;
 
 }
+
+
 
 .intro.hide {
 
@@ -250,11 +320,15 @@ body::before {
 
 }
 
+
+
 .intro-content {
 
     padding: 30px;
 
 }
+
+
 
 .intro-small {
 
@@ -270,11 +344,15 @@ body::before {
 
 }
 
+
+
 .intro h1 {
 
     font-size: clamp(45px, 9vw, 100px);
 
     font-weight: normal;
+
+
 
     background: linear-gradient(
 
@@ -290,23 +368,35 @@ body::before {
 
     );
 
+
+
     background-size: 300%;
+
+
 
     -webkit-background-clip: text;
 
     color: transparent;
 
+
+
     animation: gradientMove 6s linear infinite;
 
 }
 
+
+
 @keyframes gradientMove {
+
+
 
     0% {
 
         background-position: 0%;
 
     }
+
+
 
     100% {
 
@@ -315,6 +405,8 @@ body::before {
     }
 
 }
+
+
 
 .intro p {
 
@@ -326,9 +418,13 @@ body::before {
 
 }
 
+
+
 .enter-btn {
 
     margin-top: 35px;
+
+
 
     border: 1px solid rgba(255,255,255,.25);
 
@@ -336,23 +432,27 @@ body::before {
 
     color: white;
 
+
+
     padding: 15px 32px;
 
     border-radius: 50px;
+
+
 
     cursor: pointer;
 
     font-size: 14px;
 
+
+
     transition: .4s;
-
-    position: relative;
-
-    z-index: 10;
 
     backdrop-filter: blur(15px);
 
 }
+
+
 
 .enter-btn:hover {
 
@@ -367,199 +467,14 @@ body::before {
 }
 
 
-/* =========================================================
-   CINEMA EFFECTS
-========================================================= */
-.intro::before,.intro::after{content:"";position:absolute;left:0;right:0;height:10vh;background:#000;z-index:1;pointer-events:none}.intro::before{top:0}.intro::after{bottom:0}.intro-content{position:relative;z-index:2}.cinema-kicker{color:rgba(255,255,255,.55);font-family:Arial,sans-serif;font-size:10px;letter-spacing:5px;text-transform:uppercase;margin-bottom:18px}.cinema-line{width:90px;height:1px;margin:22px auto;background:linear-gradient(90deg,transparent,rgba(255,255,255,.8),transparent)}.challenge-note{margin-top:18px;color:rgba(255,255,255,.52);font-family:Arial,sans-serif;font-size:12px;min-height:18px}.cinema-grain{position:fixed;inset:-50%;width:200%;height:200%;pointer-events:none;z-index:99998;opacity:.035;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E");animation:grainMove .18s steps(2) infinite}@keyframes grainMove{0%{transform:translate(0,0)}25%{transform:translate(2%,-1%)}50%{transform:translate(-1%,2%)}75%{transform:translate(1%,1%)}100%{transform:translate(-2%,-1%)}}#petals{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:9990}.petal{position:absolute;top:-12vh;width:12px;height:18px;border-radius:80% 20% 80% 20%;background:linear-gradient(135deg,#fff,#f9a8d4 55%,#ec4899);box-shadow:0 2px 10px rgba(236,72,153,.35);opacity:0;animation:petalFall linear forwards}@keyframes petalFall{0%{opacity:0;transform:translate3d(0,-10vh,0) rotate(0deg) scale(.7)}10%{opacity:.95}100%{opacity:0;transform:translate3d(var(--drift),115vh,0) rotate(var(--spin)) scale(1)}}.cinematic-reveal{animation:cinemaReveal 1.7s cubic-bezier(.2,.8,.2,1) both}@keyframes cinemaReveal{from{opacity:0;transform:scale(1.08) translateY(25px);filter:blur(10px)}to{opacity:1;transform:scale(1) translateY(0);filter:blur(0)}}
-
-
-/* =========================================================
-   CINEMATIC PHOTO REVEAL
-========================================================= */
-
-#cinematic-reveal {
-    position: fixed;
-    inset: 0;
-    z-index: 99997;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background:
-        radial-gradient(circle at 50% 42%, rgba(139,92,246,.18), transparent 35%),
-        rgba(3,3,8,.97);
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    transition: opacity 1.4s ease, visibility 1.4s ease;
-    overflow: hidden;
-}
-
-#cinematic-reveal.show {
-    opacity: 1;
-    visibility: visible;
-}
-
-.cinematic-vignette {
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle, transparent 30%, rgba(0,0,0,.72) 100%);
-    pointer-events: none;
-}
-
-.cinematic-photo {
-    position: relative;
-    z-index: 3;
-    width: min(370px, 70vw);
-    max-height: 76vh;
-    object-fit: contain;
-    border-radius: 22px;
-    border: 1px solid rgba(255,255,255,.28);
-    box-shadow:
-        0 35px 100px rgba(0,0,0,.65),
-        0 0 80px rgba(236,72,153,.18);
-    opacity: 0;
-    transform: scale(1.16) translateY(28px);
-    filter: blur(14px) brightness(.7);
-}
-
-#cinematic-reveal.show .cinematic-photo {
-    animation: cinematicPhotoIn 2.2s cubic-bezier(.16,.84,.24,1) .15s forwards;
-}
-
-@keyframes cinematicPhotoIn {
-    0% {
-        opacity: 0;
-        transform: scale(1.16) translateY(28px);
-        filter: blur(14px) brightness(.7);
-    }
-    45% {
-        opacity: 1;
-        filter: blur(3px) brightness(.9);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1) translateY(0);
-        filter: blur(0) brightness(1);
-    }
-}
-
-.cinematic-caption {
-    position: absolute;
-    z-index: 4;
-    bottom: 8%;
-    color: rgba(255,255,255,.8);
-    font-family: Georgia, serif;
-    font-size: 13px;
-    letter-spacing: 6px;
-    text-transform: uppercase;
-    opacity: 0;
-    transform: translateY(15px);
-}
-
-#cinematic-reveal.show .cinematic-caption {
-    animation: captionIn 1.2s ease 1.15s forwards;
-}
-
-@keyframes captionIn {
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.flower {
-    position: absolute;
-    top: -12vh;
-    z-index: 8;
-    pointer-events: none;
-    user-select: none;
-    opacity: 0;
-    animation: flowerFall linear forwards;
-    will-change: transform, opacity;
-    text-shadow: 0 4px 15px rgba(0,0,0,.3);
-}
-
-@keyframes flowerFall {
-    0% {
-        opacity: 0;
-        transform: translate3d(0,-12vh,0) rotate(0deg) scale(.45);
-    }
-    8% { opacity: .95; }
-    55% { opacity: 1; }
-    100% {
-        opacity: 0;
-        transform:
-            translate3d(var(--drift),115vh,0)
-            rotate(var(--spin))
-            scale(1.08);
-    }
-}
-
-.photo-frame.revealed {
-    opacity: 1 !important;
-    visibility: visible !important;
-}
-.hero-photo-hidden {
-    opacity: 0;
-    visibility: hidden;
-}
-
-.hero-photo-hidden.revealed {
-    opacity: 1;
-    visibility: visible;
-    animation: cinemaReveal 1.4s ease both;
-}
-
-.hero-content.cinematic-content {
-    opacity: 0;
-    transform: translateY(20px);
-}
-
-.hero-content.cinematic-content.revealed {
-    animation: contentRise 1.4s ease .2s forwards;
-}
-
-@keyframes contentRise {
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* More cinematic surprise */
-
-#cinematic-reveal.persistent-flowers {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: none;
-    background: transparent;
-    transition: opacity 1.5s ease;
-}
-
-#cinematic-reveal.persistent-flowers .cinematic-vignette,
-#cinematic-reveal.persistent-flowers .cinematic-photo,
-#cinematic-reveal.persistent-flowers .cinematic-caption {
-    transition: opacity 1.5s ease;
-}
-
-#cinematic-reveal.persistent-flowers.flowers-only {
-    background: transparent;
-}
-
-#cinematic-reveal.persistent-flowers.flowers-only .cinematic-vignette,
-#cinematic-reveal.persistent-flowers.flowers-only .cinematic-photo,
-#cinematic-reveal.persistent-flowers.flowers-only .cinematic-caption {
-    opacity: 0 !important;
-    animation: none !important;
-    visibility: hidden;
-}
-
-.surprise-burst {
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    z-index: 9996;
-}
 
 /* =========================================================
 
    NAVIGATION
 
 ========================================================= */
+
+
 
 nav {
 
@@ -571,9 +486,15 @@ nav {
 
     transform: translateX(-50%);
 
+
+
     z-index: 1000;
 
+
+
     padding: 12px 22px;
+
+
 
     background: rgba(10,10,20,.55);
 
@@ -581,13 +502,19 @@ nav {
 
     border-radius: 50px;
 
+
+
     backdrop-filter: blur(20px);
+
+
 
     display: flex;
 
     gap: 25px;
 
 }
+
+
 
 nav a {
 
@@ -603,11 +530,15 @@ nav a {
 
 }
 
+
+
 nav a:hover {
 
     color: white;
 
 }
+
+
 
 /* =========================================================
 
@@ -615,9 +546,13 @@ nav a:hover {
 
 ========================================================= */
 
+
+
 .hero {
 
     min-height: 100vh;
+
+
 
     display: flex;
 
@@ -627,17 +562,25 @@ nav a:hover {
 
     text-align: center;
 
+
+
     padding: 100px 25px;
+
+
 
     position: relative;
 
 }
+
+
 
 .hero-content {
 
     max-width: 950px;
 
 }
+
+
 
 .overline {
 
@@ -653,6 +596,8 @@ nav a:hover {
 
 }
 
+
+
 .hero h1 {
 
     font-size: clamp(70px, 14vw, 170px);
@@ -660,6 +605,8 @@ nav a:hover {
     line-height: .9;
 
     font-weight: normal;
+
+
 
     background: linear-gradient(
 
@@ -675,17 +622,27 @@ nav a:hover {
 
     );
 
+
+
     background-size: 300%;
+
+
 
     -webkit-background-clip: text;
 
     color: transparent;
 
+
+
     animation: gradientMove 8s linear infinite;
+
+
 
     text-shadow: 0 0 80px rgba(167,139,250,.15);
 
 }
+
+
 
 .hero-description {
 
@@ -693,7 +650,11 @@ nav a:hover {
 
     max-width: 600px;
 
+
+
     color: #aaa6b7;
+
+
 
     font-size: 19px;
 
@@ -701,11 +662,15 @@ nav a:hover {
 
 }
 
+
+
 .scroll {
 
     margin-top: 70px;
 
     color: #777;
+
+
 
     font-family: Arial, sans-serif;
 
@@ -716,6 +681,8 @@ nav a:hover {
     text-transform: uppercase;
 
 }
+
+
 
 .scroll span {
 
@@ -729,7 +696,11 @@ nav a:hover {
 
 }
 
+
+
 @keyframes bounce {
+
+
 
     50% {
 
@@ -739,11 +710,15 @@ nav a:hover {
 
 }
 
+
+
 /* =========================================================
 
    SECTIONS
 
 ========================================================= */
+
+
 
 section {
 
@@ -751,13 +726,19 @@ section {
 
     max-width: 1100px;
 
+
+
     margin: auto;
 
     padding: 120px 25px;
 
+
+
     position: relative;
 
 }
+
+
 
 .section-label {
 
@@ -767,13 +748,19 @@ section {
 
     letter-spacing: 5px;
 
+
+
     font-size: 11px;
 
     font-family: Arial, sans-serif;
 
+
+
     margin-bottom: 20px;
 
 }
+
+
 
 .section-title {
 
@@ -784,6 +771,8 @@ section {
     margin-bottom: 25px;
 
 }
+
+
 
 .section-description {
 
@@ -797,15 +786,21 @@ section {
 
 }
 
+
+
 /* =========================================================
 
    CARDS
 
 ========================================================= */
 
+
+
 .cards {
 
     margin-top: 60px;
+
+
 
     display: grid;
 
@@ -815,13 +810,21 @@ section {
 
 }
 
+
+
 .card {
 
     padding: 40px 30px;
 
+
+
     min-height: 280px;
 
+
+
     border-radius: 25px;
+
+
 
     background: linear-gradient(
 
@@ -833,11 +836,19 @@ section {
 
     );
 
+
+
     border: 1px solid rgba(255,255,255,.09);
+
+
 
     backdrop-filter: blur(15px);
 
+
+
     transition: .5s;
+
+
 
     position: relative;
 
@@ -845,25 +856,37 @@ section {
 
 }
 
+
+
 .card::before {
 
     content: "";
 
     position: absolute;
 
+
+
     width: 200px;
 
     height: 200px;
+
+
 
     background: #8b5cf6;
 
     filter: blur(100px);
 
+
+
     opacity: 0;
+
+
 
     transition: .5s;
 
 }
+
+
 
 .card:hover {
 
@@ -873,11 +896,15 @@ section {
 
 }
 
+
+
 .card:hover::before {
 
     opacity: .15;
 
 }
+
+
 
 .card-icon {
 
@@ -886,6 +913,8 @@ section {
     margin-bottom: 30px;
 
 }
+
+
 
 .card h3 {
 
@@ -897,6 +926,8 @@ section {
 
 }
 
+
+
 .card p {
 
     color: #92909d;
@@ -905,11 +936,15 @@ section {
 
 }
 
+
+
 /* =========================================================
 
    LETTER
 
 ========================================================= */
+
+
 
 .letter-wrapper {
 
@@ -919,11 +954,17 @@ section {
 
 }
 
+
+
 .letter {
 
     padding: 60px;
 
+
+
     border-radius: 30px;
+
+
 
     background:
 
@@ -937,7 +978,11 @@ section {
 
         );
 
+
+
     border: 1px solid rgba(255,255,255,.1);
+
+
 
     box-shadow:
 
@@ -945,21 +990,31 @@ section {
 
         inset 0 0 50px rgba(255,255,255,.02);
 
+
+
     font-size: 20px;
 
     line-height: 2;
 
+
+
     color: #cbc7d5;
+
+
 
     transition: transform .5s;
 
 }
+
+
 
 .letter:hover {
 
     transform: rotateX(2deg) rotateY(-2deg);
 
 }
+
+
 
 .signature {
 
@@ -973,21 +1028,29 @@ section {
 
 }
 
+
+
 /* =========================================================
 
    TIMELINE
 
 ========================================================= */
 
+
+
 .timeline {
 
     margin-top: 70px;
+
+
 
     border-left: 1px solid rgba(167,139,250,.4);
 
     padding-left: 35px;
 
 }
+
+
 
 .timeline-item {
 
@@ -997,27 +1060,39 @@ section {
 
 }
 
+
+
 .timeline-item::before {
 
     content: "";
 
     position: absolute;
 
+
+
     width: 10px;
 
     height: 10px;
+
+
 
     background: #a78bfa;
 
     border-radius: 50%;
 
+
+
     left: -41px;
 
     top: 7px;
 
+
+
     box-shadow: 0 0 20px #a78bfa;
 
 }
+
+
 
 .timeline-item h3 {
 
@@ -1029,6 +1104,8 @@ section {
 
 }
 
+
+
 .timeline-item p {
 
     color: #92909d;
@@ -1037,17 +1114,23 @@ section {
 
 }
 
+
+
 /* =========================================================
 
    SURPRISE
 
 ========================================================= */
 
+
+
 .surprise {
 
     text-align: center;
 
     min-height: 100vh;
+
+
 
     display: flex;
 
@@ -1059,21 +1142,33 @@ section {
 
 }
 
+
+
 .surprise .section-title {
 
     max-width: 800px;
 
 }
 
+
+
 .reveal-btn {
 
     margin-top: 40px;
 
+
+
     padding: 18px 38px;
+
+
 
     border-radius: 50px;
 
+
+
     border: 1px solid rgba(255,255,255,.2);
+
+
 
     background: linear-gradient(
 
@@ -1085,17 +1180,27 @@ section {
 
     );
 
+
+
     color: white;
 
+
+
     cursor: pointer;
+
+
 
     font-family: Georgia, serif;
 
     font-size: 16px;
 
+
+
     transition: .4s;
 
 }
+
+
 
 .reveal-btn:hover {
 
@@ -1105,27 +1210,43 @@ section {
 
 }
 
+
+
 .secret {
 
     max-width: 700px;
 
+
+
     margin-top: 50px;
+
+
 
     font-size: 28px;
 
     line-height: 1.7;
 
+
+
     color: #e4d9ff;
+
+
 
     opacity: 0;
 
     transform: translateY(20px);
 
+
+
     transition: 1s;
+
+
 
     pointer-events: none;
 
 }
+
+
 
 .secret.show {
 
@@ -1137,11 +1258,15 @@ section {
 
 }
 
+
+
 /* =========================================================
 
    HEARTS
 
 ========================================================= */
+
+
 
 .heart {
 
@@ -1149,17 +1274,29 @@ section {
 
     pointer-events: none;
 
+
+
     color: #f9a8d4;
+
+
 
     font-size: 20px;
 
+
+
     z-index: 9999;
+
+
 
     animation: heartFloat 4s ease-out forwards;
 
 }
 
+
+
 @keyframes heartFloat {
+
+
 
     0% {
 
@@ -1168,6 +1305,8 @@ section {
         opacity: 1;
 
     }
+
+
 
     100% {
 
@@ -1179,11 +1318,15 @@ section {
 
             scale(1.4);
 
+
+
         opacity: 0;
 
     }
 
 }
+
+
 
 /* =========================================================
 
@@ -1191,21 +1334,35 @@ section {
 
 ========================================================= */
 
+
+
 footer {
 
     text-align: center;
 
+
+
     padding: 80px 25px;
+
+
 
     color: #555260;
 
+
+
     font-family: Arial, sans-serif;
 
+
+
     font-size: 12px;
+
+
 
     letter-spacing: 1px;
 
 }
+
+
 
 /* =========================================================
 
@@ -1213,7 +1370,11 @@ footer {
 
 ========================================================= */
 
+
+
 @media (max-width: 750px) {
+
+
 
     nav {
 
@@ -1221,17 +1382,23 @@ footer {
 
     }
 
+
+
     .cards {
 
         grid-template-columns: 1fr;
 
     }
 
+
+
     section {
 
         padding: 90px 20px;
 
     }
+
+
 
     .letter {
 
@@ -1241,6 +1408,8 @@ footer {
 
     }
 
+
+
     .hero-description {
 
         font-size: 17px;
@@ -1249,24 +1418,18 @@ footer {
 
 }
 
+
+
 </style>
+
+
 
 </head>
 
+
+
 <body>
 
-<div class="cinema-grain"></div>
-<div id="petals"></div>
-
-<audio id="music-player" preload="auto" loop>
-    <source src="/static/othaiyadi-pathayila.mp3" type="audio/mpeg">
-</audio>
-
-<div id="cinematic-reveal" aria-hidden="true">
-    <div class="cinematic-vignette"></div>
-    <img class="cinematic-photo" src="/static/varleen.png" alt="A cinematic photo">
-    <div class="cinematic-caption">A little something for you</div>
-</div>
 
 
 <div class="aurora"></div>
@@ -1275,17 +1438,25 @@ footer {
 
 <div class="cursor-glow"></div>
 
+
+
+
+
 <!-- =====================================================
 
      INTRO
 
 ===================================================== -->
 
+
+
 <div class="intro" id="intro">
+
+
 
     <div class="intro-content">
 
-        <div class="cinema-kicker">A tiny cinematic experience</div>
+
 
         <div class="intro-small">
 
@@ -1293,7 +1464,11 @@ footer {
 
         </div>
 
+
+
         <h1>For Varleen</h1>
+
+
 
         <p>
 
@@ -1301,21 +1476,25 @@ footer {
 
         </p>
 
-        <div class="cinema-line"></div>
 
-        <button class="enter-btn" id="enter-btn" onclick="enterSite()">
+
+        <button class="enter-btn" onclick="enterSite()">
 
             Open ✨
 
         </button>
 
-        <div class="challenge-note" id="challenge-note">
-            You might have to work a little for this one 😌
-        </div>
+
 
     </div>
 
+
+
 </div>
+
+
+
+
 
 <!-- =====================================================
 
@@ -1323,17 +1502,33 @@ footer {
 
 ===================================================== -->
 
+
+
 <nav>
+
+
 
     <a href="#beginning">Beginning</a>
 
+
+
     <a href="#why">Why You</a>
+
+
 
     <a href="#letter">Letter</a>
 
+
+
     <a href="#surprise">Surprise</a>
 
+
+
 </nav>
+
+
+
+
 
 <!-- =====================================================
 
@@ -1341,9 +1536,15 @@ footer {
 
 ===================================================== -->
 
+
+
 <div class="hero" id="beginning">
 
-    <div class="hero-content cinematic-content" id="hero-content">
+
+
+    <div class="hero-content">
+
+
 
         <div class="overline">
 
@@ -1351,41 +1552,73 @@ footer {
 
         </div>
 
+
+
         <h1>Varleen</h1>
+
+
 
         <p class="hero-description">
 
+
+
             I could have sent you a message.
 
+
+
             <br>
+
+
 
             Instead, I learned how to build a website.
 
+
+
             <br><br>
+
+
 
             Maybe that's slightly excessive.
 
+
+
             <br>
+
+
 
             But some people are worth the extra effort.
 
+
+
         </p>
 
-        <div class="photo-frame hero-photo-hidden" id="photo-frame">
-            <img src="/static/varleen.png" alt="A photo">
-        </div>
+
 
         <div class="scroll">
 
+
+
             Keep scrolling
+
+
 
             <span>↓</span>
 
+
+
         </div>
+
+
 
     </div>
 
+
+
 </div>
+
+
+
+
 
 <!-- =====================================================
 
@@ -1393,7 +1626,11 @@ footer {
 
 ===================================================== -->
 
+
+
 <section id="why">
+
+
 
     <div class="section-label">
 
@@ -1401,29 +1638,49 @@ footer {
 
     </div>
 
+
+
     <h2 class="section-title">
 
         Why you?
 
     </h2>
 
+
+
     <p class="section-description">
+
+
 
         There are things about someone that are difficult
 
         to put into a sentence.
 
+
+
         Sometimes it's not one particular thing.
+
+
 
         It's simply the way conversations can make an
 
         ordinary day feel a little different.
 
+
+
     </p>
+
+
+
+
 
     <div class="cards">
 
+
+
         <div class="card">
+
+
 
             <div class="card-icon">
 
@@ -1431,11 +1688,15 @@ footer {
 
             </div>
 
+
+
             <h3>
 
                 Your energy
 
             </h3>
+
+
 
             <p>
 
@@ -1447,9 +1708,17 @@ footer {
 
             </p>
 
+
+
         </div>
 
+
+
+
+
         <div class="card">
+
+
 
             <div class="card-icon">
 
@@ -1457,11 +1726,15 @@ footer {
 
             </div>
 
+
+
             <h3>
 
                 Your presence
 
             </h3>
+
+
 
             <p>
 
@@ -1469,13 +1742,23 @@ footer {
 
                 mind almost immediately.
 
+
+
                 Somehow, ours tend to stick around.
 
             </p>
 
+
+
         </div>
 
+
+
+
+
         <div class="card">
+
+
 
             <div class="card-icon">
 
@@ -1483,11 +1766,15 @@ footer {
 
             </div>
 
+
+
             <h3>
 
                 Just you
 
             </h3>
+
+
 
             <p>
 
@@ -1497,11 +1784,21 @@ footer {
 
             </p>
 
+
+
         </div>
+
+
 
     </div>
 
+
+
 </section>
+
+
+
+
 
 <!-- =====================================================
 
@@ -1509,7 +1806,11 @@ footer {
 
 ===================================================== -->
 
+
+
 <section>
+
+
 
     <div class="section-label">
 
@@ -1517,33 +1818,53 @@ footer {
 
     </div>
 
+
+
     <h2 class="section-title">
 
         The little things.
 
     </h2>
 
+
+
     <p class="section-description">
+
+
 
         The best stories aren't always made from huge
 
         moments.
 
+
+
         Sometimes they're made from tiny conversations,
 
         random thoughts and unexpected connections.
 
+
+
     </p>
+
+
+
+
 
     <div class="timeline">
 
+
+
         <div class="timeline-item">
+
+
 
             <h3>
 
                 The beginning
 
             </h3>
+
+
 
             <p>
 
@@ -1555,15 +1876,25 @@ footer {
 
             </p>
 
+
+
         </div>
 
+
+
+
+
         <div class="timeline-item">
+
+
 
             <h3>
 
                 The conversations
 
             </h3>
+
+
 
             <p>
 
@@ -1575,15 +1906,25 @@ footer {
 
             </p>
 
+
+
         </div>
 
+
+
+
+
         <div class="timeline-item">
+
+
 
             <h3>
 
                 And then this website
 
             </h3>
+
+
 
             <p>
 
@@ -1595,11 +1936,21 @@ footer {
 
             </p>
 
+
+
         </div>
+
+
 
     </div>
 
+
+
 </section>
+
+
+
+
 
 <!-- =====================================================
 
@@ -1607,7 +1958,11 @@ footer {
 
 ===================================================== -->
 
+
+
 <section id="letter">
+
+
 
     <div class="section-label">
 
@@ -1615,27 +1970,49 @@ footer {
 
     </div>
 
+
+
     <h2 class="section-title">
 
         A letter, of sorts.
 
     </h2>
 
+
+
+
+
     <div class="letter-wrapper">
+
+
 
         <div class="letter">
 
+
+
             Dear Varleen,
 
+
+
             <br><br>
+
+
 
             I wanted to make you something.
 
+
+
             Not something I could simply copy and paste.
+
+
 
             Something that took time.
 
+
+
             <br><br>
+
+
 
             So I started learning how to build websites,
 
@@ -1643,23 +2020,41 @@ footer {
 
             installed Python packages,
 
+
+
             and somehow ended up here.
 
+
+
             <br><br>
+
+
 
             I don't know if a website can properly explain
 
             why someone stands out.
 
+
+
             Probably not.
 
+
+
             <br><br>
+
+
 
             But maybe the effort behind it can.
 
+
+
             <br><br>
 
+
+
             So here it is.
+
+
 
             A tiny corner of the internet that exists
 
@@ -1667,9 +2062,15 @@ footer {
 
             to make it.
 
+
+
             <br><br>
 
+
+
             I hope it makes you smile.
+
+
 
             <div class="signature">
 
@@ -1677,11 +2078,21 @@ footer {
 
             </div>
 
+
+
         </div>
+
+
 
     </div>
 
+
+
 </section>
+
+
+
+
 
 <!-- =====================================================
 
@@ -1689,7 +2100,11 @@ footer {
 
 ===================================================== -->
 
+
+
 <section class="surprise" id="surprise">
+
+
 
     <div class="section-label">
 
@@ -1697,49 +2112,85 @@ footer {
 
     </div>
 
+
+
     <h2 class="section-title">
 
         I saved one last thing for you.
 
     </h2>
 
+
+
     <p class="section-description"
 
        style="text-align:center;">
 
+
+
         You made it this far.
+
+
 
         <br>
 
+
+
         So I think you deserve to see it.
 
+
+
     </p>
+
+
+
+
 
     <button
 
         class="reveal-btn"
 
-        id="surprise-btn"
-
         onclick="reveal()">
+
+
 
         Open the surprise ✨
 
+
+
     </button>
+
+
+
+
 
     <div class="secret" id="secret">
 
+
+
         If this website made you smile even for a second,
 
+
+
         <br><br>
+
+
 
         then all those lines of code were worth it.
 
+
+
         <br><br>
+
+
 
         And if you ever wonder why I made all this...
 
+
+
         <br><br>
+
+
 
         <strong>
 
@@ -1749,13 +2200,25 @@ footer {
 
         </strong>
 
+
+
         ✨
+
+
 
     </div>
 
+
+
 </section>
 
+
+
+
+
 <footer>
+
+
 
     Made with Python, curiosity,
 
@@ -1763,13 +2226,25 @@ footer {
 
     and a little bit of heart.
 
+
+
     <br><br>
+
+
 
     For Varleen · 2026
 
+
+
 </footer>
 
+
+
+
+
 <script>
+
+
 
 /* =====================================================
 
@@ -1777,37 +2252,61 @@ footer {
 
 ===================================================== */
 
+
+
 const stars = document.getElementById("stars");
+
+
 
 for (let i = 0; i < 140; i++) {
 
+
+
     const star = document.createElement("div");
 
+
+
     star.className = "star";
+
+
 
     star.style.left =
 
         Math.random() * 100 + "%";
 
+
+
     star.style.top =
 
         Math.random() * 100 + "%";
+
+
 
     star.style.animationDuration =
 
         (1.5 + Math.random() * 4) + "s";
 
+
+
     star.style.animationDelay =
 
         Math.random() * 4 + "s";
+
+
 
     star.style.opacity =
 
         Math.random();
 
+
+
     stars.appendChild(star);
 
 }
+
+
+
+
 
 /* =====================================================
 
@@ -1815,223 +2314,163 @@ for (let i = 0; i < 140; i++) {
 
 ===================================================== */
 
-let dodgeCount = 0;
-let unlocked = false;
-let lastDodge = 0;
-const intro = document.getElementById("intro");
-const button = document.getElementById("enter-btn");
-const note = document.getElementById("challenge-note");
 
-function moveButton(){
-    if(unlocked)return;
-    const now=Date.now();
-    if(now-lastDodge<650)return;
-    lastDodge=now;
-    if(dodgeCount>=4){note.textContent="Okay... you caught me. ✨";button.style.transform="translate(0,0)";return;}
-    dodgeCount++;
-    const x=(Math.random()*240)-120;
-    const y=(Math.random()*150)-75;
-    const r=(Math.random()*10)-5;
-    button.style.transform=`translate(${x}px,${y}px) rotate(${r}deg)`;
-    const messages=["A little too close 😌","You almost had it 😂","Not that easy... 👀","Okay okay... one more try ✨"];
-    note.textContent=messages[dodgeCount-1];
+
+function enterSite() {
+
+
+
+    document.getElementById("intro")
+
+        .classList.add("hide");
+
+
+
 }
 
-intro.addEventListener("pointermove",function(e){
-    if(unlocked)return;
-    const rect=button.getBoundingClientRect();
-    const distance=Math.hypot(e.clientX-(rect.left+rect.width/2),e.clientY-(rect.top+rect.height/2));
-    if(distance<115)moveButton();
+
+
+
+
+/* =====================================================
+
+   MOUSE GLOW
+
+===================================================== */
+
+
+
+const glow =
+
+    document.querySelector(".cursor-glow");
+
+
+
+document.addEventListener("mousemove", function(e) {
+
+
+
+    glow.style.left =
+
+        e.clientX + "px";
+
+
+
+    glow.style.top =
+
+        e.clientY + "px";
+
+
+
 });
 
 
-function createFlowers(containerId = "cinematic-reveal", count = 125) {
-    const container = document.getElementById(containerId);
-    if (!container) return;
-
-    const flowers = ["🌸", "🌺", "🌷", "🌼", "💮", "✿", "❀"];
-    const colors = ["#ffffff", "#ffd1e6", "#f9a8d4", "#e9d5ff", "#fde68a", "#fecdd3"];
-
-    for (let i = 0; i < count; i++) {
-        const flower = document.createElement("span");
-        flower.className = "flower";
-        flower.textContent = flowers[Math.floor(Math.random() * flowers.length)];
-
-        const size = 14 + Math.random() * 25;
-        flower.style.left = (Math.random() * 108 - 4) + "vw";
-        flower.style.fontSize = size + "px";
-        flower.style.color = colors[Math.floor(Math.random() * colors.length)];
-        flower.style.setProperty("--drift", ((Math.random() * 420) - 210) + "px");
-        flower.style.setProperty("--spin", ((Math.random() * 1200) - 600) + "deg");
-        flower.style.animationDuration = (5 + Math.random() * 6) + "s";
-        flower.style.animationDelay = (Math.random() * 2.8) + "s";
-
-        container.appendChild(flower);
-    }
-}
 
 
-function startFlowerRain(containerId = "cinematic-reveal") {
-    const container = document.getElementById(containerId);
-    if (!container || window.flowerRainTimer) return;
-
-    // Keep a steady stream of different flowers falling over the photo.
-    const symbols = ["🌸", "🌺", "🌷", "🌼", "💮", "✿", "❀", "✾"];
-    const colors = ["#ffffff", "#ffd1e6", "#f9a8d4", "#e9d5ff", "#fde68a", "#fecdd3"];
-
-    function spawnFlower() {
-        if (!document.getElementById(containerId)) return;
-
-        const flower = document.createElement("span");
-        flower.className = "flower";
-        flower.textContent = symbols[Math.floor(Math.random() * symbols.length)];
-
-        flower.style.left = (Math.random() * 104 - 2) + "vw";
-        flower.style.fontSize = (13 + Math.random() * 25) + "px";
-        flower.style.color = colors[Math.floor(Math.random() * colors.length)];
-        flower.style.setProperty("--drift", ((Math.random() * 360) - 180) + "px");
-        flower.style.setProperty("--spin", ((Math.random() * 1200) - 600) + "deg");
-        flower.style.animationDuration = (5 + Math.random() * 6) + "s";
-
-        container.appendChild(flower);
-
-        // Prevent the DOM from growing forever.
-        setTimeout(() => flower.remove(), 12000);
-    }
-
-    // Start with a full, already-flowing scene.
-    for (let i = 0; i < 45; i++) {
-        setTimeout(spawnFlower, i * 85);
-    }
-
-    window.flowerRainTimer = setInterval(spawnFlower, 180);
-}
-
-function stopFlowerRain() {
-    if (window.flowerRainTimer) {
-        clearInterval(window.flowerRainTimer);
-        window.flowerRainTimer = null;
-    }
-}
-
-function createPetalBurst() {
-    const container = document.getElementById("cinematic-reveal");
-    if (!container) return;
-
-    const petals = ["🌸", "🌺", "🌷", "🌼", "💮", "✿", "❀", "✾"];
-    for (let i = 0; i < 45; i++) {
-        const petal = document.createElement("span");
-        petal.className = "flower";
-        petal.textContent = petals[Math.floor(Math.random() * petals.length)];
-        petal.style.left = "50%";
-        petal.style.top = "42%";
-        petal.style.fontSize = (10 + Math.random() * 20) + "px";
-        petal.style.setProperty("--drift", ((Math.random() * 700) - 350) + "px");
-        petal.style.setProperty("--spin", ((Math.random() * 1600) - 800) + "deg");
-        petal.style.animationDuration = (3.5 + Math.random() * 3) + "s";
-        petal.style.animationDelay = (Math.random() * .5) + "s";
-        container.appendChild(petal);
-    }
-}
-
-function enterSite(){
-    if(unlocked)return;
-
-    unlocked=true;
-    note.textContent="Okay... you caught me. ✨";
-    button.style.transform="translate(0,0)";
-    button.textContent="Enjoy the movie 🎬";
-
-    const player=document.getElementById("music-player");
-    player.currentTime=0;
-    player.volume=1.0;
-
-    const playPromise=player.play();
-    if(playPromise!==undefined){
-        playPromise.catch(function(){
-            note.textContent="Press play if the music doesn't start 🎵";
-            player.controls=true;
-            player.style.position="fixed";
-            player.style.left="50%";
-            player.style.bottom="20px";
-            player.style.transform="translateX(-50%)";
-            player.style.zIndex="2000";
-        });
-    }
-
-    intro.classList.add("hide");
-
-    // The photo is the FIRST thing she sees after opening.
-    setTimeout(function(){
-        const reveal = document.getElementById("cinematic-reveal");
-        const photo = document.getElementById("photo-frame");
-        const content = document.getElementById("hero-content");
-
-        reveal.classList.add("show");
-        reveal.setAttribute("aria-hidden", "false");
-
-        // Lots of different flowers begin falling over the cinematic photo.
-        startFlowerRain("cinematic-reveal");
-        setTimeout(createPetalBurst, 850);
-
-        // After the photo has had its cinematic moment, transition into the site.
-        setTimeout(function(){
-            reveal.classList.add("persistent-flowers");
-            reveal.setAttribute("aria-hidden", "false");
-
-            // Keep the photo reveal visible for a cinematic moment, then
-            // transition the photo itself into the main page while the
-            // flower rain continues over it.
-            photo.classList.remove("hero-photo-hidden");
-            photo.classList.add("revealed");
-            content.classList.add("revealed");
-
-            setTimeout(function(){
-                reveal.classList.add("flowers-only");
-            }, 1200);
-        }, 5600);
-    }, 650);
-}
 
 /* =====================================================
-   SURPRISE REVEAL
+
+   SURPRISE
+
 ===================================================== */
 
-function reveal() {
-    const secret = document.getElementById("secret");
-    const btn = document.getElementById("surprise-btn");
 
-    if (!secret) return;
+
+function reveal() {
+
+
+
+    const secret =
+
+        document.getElementById("secret");
+
+
 
     secret.classList.add("show");
 
-    if (btn) {
-        btn.textContent = "✨ Surprise unlocked";
-        btn.disabled = true;
-        btn.style.opacity = ".7";
-        btn.style.cursor = "default";
+
+
+
+
+    /* CREATE FLOATING STARS */
+
+
+
+    for (let i = 0; i < 35; i++) {
+
+
+
+        const heart =
+
+            document.createElement("div");
+
+
+
+        heart.className = "heart";
+
+
+
+        heart.innerHTML =
+
+            Math.random() > .5 ? "♥" : "✦";
+
+
+
+        heart.style.left =
+
+            Math.random() * 100 + "vw";
+
+
+
+        heart.style.bottom =
+
+            "-20px";
+
+
+
+        heart.style.fontSize =
+
+            (12 + Math.random() * 25) + "px";
+
+
+
+        heart.style.animationDuration =
+
+            (3 + Math.random() * 3) + "s";
+
+
+
+        heart.style.animationDelay =
+
+            Math.random() * .8 + "s";
+
+
+
+        document.body.appendChild(heart);
+
+
+
+        setTimeout(function() {
+
+
+
+            heart.remove();
+
+
+
+        }, 6500);
+
+
+
     }
 
-    // A short flower shower when the final surprise is opened.
-    const burst = document.createElement("div");
-    burst.className = "surprise-burst";
-    document.body.appendChild(burst);
 
-    const symbols = ["🌸", "🌺", "🌷", "🌼", "💮", "✿", "❀"];
-    for (let i = 0; i < 55; i++) {
-        const flower = document.createElement("span");
-        flower.className = "flower";
-        flower.textContent = symbols[Math.floor(Math.random() * symbols.length)];
-        flower.style.left = (Math.random() * 100) + "vw";
-        flower.style.fontSize = (14 + Math.random() * 22) + "px";
-        flower.style.setProperty("--drift", ((Math.random() * 260) - 130) + "px");
-        flower.style.setProperty("--spin", ((Math.random() * 900) - 450) + "deg");
-        flower.style.animationDuration = (3.5 + Math.random() * 3) + "s";
-        burst.appendChild(flower);
-    }
 
-    setTimeout(() => burst.remove(), 7000);
 }
+
+
+
+
 
 /* =====================================================
 
@@ -2039,29 +2478,45 @@ function reveal() {
 
 ===================================================== */
 
+
+
 document.querySelectorAll(".card").forEach(card => {
 
+
+
     card.addEventListener("mousemove", e => {
+
+
 
         const rect =
 
             card.getBoundingClientRect();
 
+
+
         const x =
 
             e.clientX - rect.left;
+
+
 
         const y =
 
             e.clientY - rect.top;
 
+
+
         const rotateX =
 
             ((y / rect.height) - .5) * -8;
 
+
+
         const rotateY =
 
             ((x / rect.width) - .5) * 8;
+
+
 
         card.style.transform =
 
@@ -2073,23 +2528,43 @@ document.querySelectorAll(".card").forEach(card => {
 
              translateY(-8px)`;
 
+
+
     });
+
+
+
+
 
     card.addEventListener("mouseleave", () => {
 
+
+
         card.style.transform = "";
+
+
 
     });
 
+
+
 });
 
+
+
 </script>
+
+
 
 </body>
 
 </html>
 
 """
+
+
+
+
 
 if __name__ == "__main__":
 
