@@ -344,7 +344,7 @@ body::before {
 
     font-size: 14px;
 
-    transition: .4s;
+    transition: transform .35s ease, background .3s ease, border-color .3s ease, box-shadow .3s ease;
 
     position: relative;
 
@@ -1837,12 +1837,21 @@ function moveButton(){
     note.textContent=messages[dodgeCount-1];
 }
 
-intro.addEventListener("pointermove",function(e){
-    if(unlocked)return;
+function checkButtonProximity(e){
+    if(unlocked || !button || intro.style.display === "none") return;
     const rect=button.getBoundingClientRect();
-    const distance=Math.hypot(e.clientX-(rect.left+rect.width/2),e.clientY-(rect.top+rect.height/2));
-    if(distance<115)moveButton();
-});
+    const cx=rect.left + rect.width/2;
+    const cy=rect.top + rect.height/2;
+    const distance=Math.hypot(e.clientX-cx, e.clientY-cy);
+
+    // Make the button dodge before the cursor actually reaches it.
+    if(distance < 170){
+        moveButton();
+    }
+}
+
+// Listen on the document so the dodge still works after the button moves.
+document.addEventListener("pointermove", checkButtonProximity, {passive:true});
 
 
 function createFlowers(containerId = "cinematic-reveal", count = 125) {
